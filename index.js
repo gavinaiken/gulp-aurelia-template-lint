@@ -1,5 +1,5 @@
 var Stream = require('stream');
-var gutil = require('gulp-util');
+var log = require('fancy-log');
 var AureliaLinter = require('aurelia-template-lint').AureliaLinter;
 var Config = require('aurelia-template-lint').Config;
 var Path = require('path');
@@ -10,7 +10,7 @@ module.exports = function(config, reporter) {
   
     if(!reporter)
         reporter = (error, file)=>{
-             gutil.log(`WARNING: ${error.message} Ln ${error.line} Col ${error.column}`, file);
+             log(`WARNING: ${error.message} Ln ${error.line} Col ${error.column}`, file);
         }
           
     var linter = new AureliaLinter(config);

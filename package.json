@@ -18,13 +18,14 @@
   ],
   "dependencies": {
     "aurelia-template-lint": "^0.9.4",
-    "gulp": "^3.x",
-    "gulp-util": "^3.x"
+    "fancy-log": "^1.3.3",
+    "vinyl": "^2.2.0"
   },
   "scripts": {
     "test": "gulp test"
   },
   "devDependencies": {
+    "gulp": "^4.x",
     "gulp-jasmine": "^2.3.0"
   }
 }

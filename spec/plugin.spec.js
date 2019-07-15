@@ -1,5 +1,5 @@
 var PassThrough = require('stream').PassThrough
-var gutil = require('gulp-util');
+var Vinyl = require('vinyl');
 
 var linter = require('../');
 
@@ -11,7 +11,7 @@ describe('gulp-aurelia-template-lint', function () {
     it('should return exact input', function (done) {
       var stream = linter();
       var fakeStream = new PassThrough();
-      var fakeFile = new gutil.File({
+      var fakeFile = new Vinyl({
         contents: fakeStream
       });
       
